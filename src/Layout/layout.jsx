@@ -6,6 +6,9 @@ import Content from '../Components/Content';
 import styles from './layout.module.css';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import Dashboard from '../Components/dashboard';
+import Users from '../Components/users';
+import ProfilePage from '../Components/ProfilePage';
+import Tasks from '../Components/Tasks';
 
 const Layout = () => {
   return (
@@ -43,13 +46,16 @@ const Layout = () => {
         <Route index path="/" element ={<Content/>}></Route>
         <Route path="/home" element={<Content/>}></Route>
         <Route path="/dashboard" element={<Dashboard/>}/>
+        <Route path="/students" element={<Users/>}/>
+        <Route path="/teachers" element={<ProfilePage/>}/>
+        <Route path="/tasks" element={<Tasks/>}/>
         {/* <Route path="/users">
           <Route index element={<Users/>} />
           <Route path="Profile" element={<ProfilePage/>}/>
           <Route path=":userID" element={<Profile/>}/>
           <Route path="edit" element={<EditForm/>}/>
         </Route> */}
-        <Route path="/404" element={<h3>User Not Fount</h3>}  />
+        <Route path="/404" element={<h3>Page not Found</h3>}  />
         <Route path="*" element={<Navigate to="/404" replace/>}/>
       </Routes>
         </section>

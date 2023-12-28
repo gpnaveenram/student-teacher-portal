@@ -3,6 +3,12 @@ import { Link } from 'react-router-dom';
 
 // Functional Component
 const SimpleComponent = () => {
+
+
+
+
+
+
   return (
     <div className="d-flex flex-column flex-shrink-0 p-3 text-bg-dark" style={{width: "280px",height:700}}>
     <Link to="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
@@ -13,34 +19,34 @@ const SimpleComponent = () => {
     <ul className="nav nav-pills flex-column mb-auto">
       <li className="nav-item">
         
-        <Link to="/home" className="nav-link active" aria-current="page">
+        <Link to="/home" className= "nav-link text-white">
           {/* <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#home"></use></svg> */}
           Home
         </Link>
       </li>
       <li>
-        <Link to="/Dashboard" className="nav-link text-white">
+        <Link to="/Dashboard"  className= "nav-link text-white">
           {/* <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg> */}
           Dashboard
         </Link>
       </li>
       <li>
-        <a href="index.html" className="nav-link text-white">
+        <Link to="/students" className= "nav-link text-white">
           {/* <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table"></use></svg> */}
           Student
-        </a>
+        </Link>
       </li>
       <li>
-        <a href="index.html" className="nav-link text-white">
+        <Link to="/teachers" className= "nav-link text-white">
           {/* <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid"></use></svg> */}
           Teacher
-        </a>
+        </Link>
       </li>
       <li>
-        <a href="index.html" className="nav-link text-white">
+        <Link to="/tasks" className= "nav-link text-white">
           {/* <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg> */}
           Tasks
-        </a>
+        </Link>
       </li>
     </ul>
     <hr></hr>

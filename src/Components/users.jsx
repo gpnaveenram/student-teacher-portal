@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Card from './UserCard';
 import { getUsers } from '../userCRUD';
 import { Link } from 'react-router-dom';
+import styles from './dashboard.module.css';
 
 const Users = ()=>{
 const [users,setUser] = useState([]);
@@ -18,6 +19,8 @@ useEffect(()=>{
 },[])
 
 return(
+    <div><div className={styles.header}>
+    <h1>&nbsp;Students</h1></div>
     <div style={{display:'flex',flexWrap:'wrap'}}>
             {users.map((user)=>(
                 <div key={user.id}>
@@ -32,6 +35,7 @@ return(
                     </div>
                 </div>
             ))}
+    </div>
     </div>
 );
 }
